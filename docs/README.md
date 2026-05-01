@@ -101,11 +101,11 @@ git push origin feat/add-random-button
 3. Write a brief description of what you changed or fixed.
 4. Add reviewers (e.g., QA or another Frontend/Backend member) on the right sidebar.
 
-## Step 6: Code Review & Testing
+### Step 6: Code Review & Testing
 * **Reviewers**: Check the code. If everything is fine, approve it. If not, request changes.
 * **QA**: Pull the branch locally to test it and ensure it doesn't break the application.
 
-## Step 7: Merge and Clean Up
+### Step 7: Merge and Clean Up
 Once approved, the reviewer or PM will click **"Merge pull request"**. After it is merged successfully, the remote branch can be deleted.
 Finally, update your local machine and delete the local branch:
 ```bash
