@@ -24,7 +24,7 @@ function renderBars(numbers){
 
 function cleanComparing(){
     for(let bar of bars){
-        bar.classList.remove("comparing");
+        bar?.classList.remove("comparing");
     }
 }
 
@@ -45,14 +45,14 @@ function overwriteBar(bar,value){
 
 function clearSorted(){
     for(let bar of bars){
-        bars[bar]?.classList.remove("sorted");
+        bar?.classList.remove("sorted");
     }
 }
 
 function setDefault(){
     for(let bar of bars){
-        bars[bar]?.classList.remove("sorted");
-        bars[bar]?.classList.remove("comparing");
+        bar?.classList.remove("sorted");
+        bar?.classList.remove("comparing");
     }
 }
 
