@@ -1,0 +1,17 @@
+:root {
+    /* fundemental colors */
+    --bg-color: #f4f4f9;
+    --header-bg: #2c3e50;
+    --text-light: #ffffff;
+    
+    /* button colors */
+    --btn-primary: #3498db;
+    --btn-primary-hover: #2980b9;
+    --btn-disabled: #95a5a6;
+
+    /* bar colors */
+    --bar-default: #3498db;   /* 預設藍色 */
+    --bar-compare: #e74c3c;   /* 比較中紅色 */
+    --bar-overwrite: #2ecc71; /* 覆寫/移動中綠色 */
+    --bar-sorted: #9b59b6;    /* 完成排序紫色 */
+}
