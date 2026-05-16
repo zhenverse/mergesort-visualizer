@@ -23,15 +23,16 @@ document.addEventListener('DOMContentLoaded', () => {
     sortBtn.addEventListener('click', () => {
         // 測試
         console.log('開始排序');
-        sortBtn.disabled = true;
-        generateBtn.disabled = true;
 
         if (window.app && typeof window.app.startSort === 'function') {
+            
+            sortBtn.disabled = true;
+            generateBtn.disabled = true;
+
             window.app.startSort(() => {
-                
                 generateBtn.disabled = false; 
+                sortBtn.disabled = true;  
             });
         }
-
     });
 });
