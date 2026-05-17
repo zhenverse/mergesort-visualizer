@@ -9,10 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('產生隨機數列');
 
         if (window.app && typeof window.app.generateArray === 'function') {
-            window.app.generateArray();
+            try {
+                window.app.generateArray();
+                sortBtn.disabled = false;
+            } catch (error) {
+                console.error('產生數列失敗，按鈕保持鎖定:', error);
+            }
         }
 
-        sortBtn.disabled = false;
     });
 
     // 點擊「開始排序」 
@@ -21,10 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('開始排序');
 
         if (window.app && typeof window.app.startSort === 'function') {
-            window.app.startSort();
-        }
+            
+            sortBtn.disabled = true;
+            generateBtn.disabled = true;
 
-        sortBtn.disabled = true;
-        generateBtn.disabled = true;
+            window.app.startSort(() => {
+                generateBtn.disabled = false; 
+                sortBtn.disabled = true;  
+            });
+        }
     });
 });
