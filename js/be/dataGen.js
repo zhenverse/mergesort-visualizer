@@ -38,4 +38,4 @@ function generateRandomArray(
     return array;
 }
 
-export { generateRandomArray };
+window.generateRandomArray = generateRandomArray;
