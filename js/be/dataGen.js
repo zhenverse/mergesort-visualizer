@@ -3,7 +3,7 @@ const DEFAULT_MIN_VALUE = 5;
 const DEFAULT_MAX_VALUE = 100;
 const MAX_ARRAY_SIZE = 200;
 
-function generateRandomArray(
+export function generateRandomArray(
     size = DEFAULT_SIZE,
     min = DEFAULT_MIN_VALUE,
     max = DEFAULT_MAX_VALUE
@@ -38,4 +38,3 @@ function generateRandomArray(
     return array;
 }
 
-window.generateRandomArray = generateRandomArray;
