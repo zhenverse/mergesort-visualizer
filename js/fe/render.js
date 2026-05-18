@@ -3,8 +3,10 @@ let bars = [];
 //render an array of numbers as visual bars
 //input: an array of bar height
 //output: an array that contain bars after rendering
-function renderBars(numbers){
+export function renderArray(numbers){
     const container = document.getElementById("bar-container");
+    if (!container) return [];
+
     container.innerHTML="";
     bars = [];
     const barWidth=Math.max(8,container.clientWidth/numbers.length);
@@ -22,40 +24,43 @@ function renderBars(numbers){
     return bars;
 }
 
-function cleanComparing(){
+export function cleanComparing(){
     for(let bar of bars){
         bar?.classList.remove("comparing");
     }
 }
 
-function setComparing(bar1,bar2){
+export function setComparing(bar1,bar2){
     cleanComparing();
     bars[bar1]?.classList.add("comparing");//?. safety check
     bars[bar2]?.classList.add("comparing");
 }
 
-function setSorted(bar){
+export function setSorted(bar){
     bars[bar]?.classList.add("sorted");
 }
 
 //api_spec part
-function overwriteBar(bar,value){
+export function overwriteBar(bar,value){
     bars[bar].style.height = value + "px";
 }
 
-function clearSorted(){
+export function clearSorted(){
     for(let bar of bars){
         bar?.classList.remove("sorted");
     }
 }
 
-function setDefault(){
+export function setDefault(){
     for(let bar of bars){
         bar?.classList.remove("sorted");
         bar?.classList.remove("comparing");
     }
 }
 
+export function getBarsLength() {
+    return bars.length;
+}
 
 // Temporary mock steps based on api_spec
 // const mockSteps = [
